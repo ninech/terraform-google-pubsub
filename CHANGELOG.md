@@ -7,7 +7,21 @@ The format is based on
 and this project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.4.0](https://www.github.com/terraform-google-modules/terraform-google-pubsub/compare/v1.3.0...v1.4.0) (2020-07-20)
+
+
+### Features
+
+* Add OIDC token support ([#28](https://www.github.com/terraform-google-modules/terraform-google-pubsub/issues/28)) ([f64f8d1](https://www.github.com/terraform-google-modules/terraform-google-pubsub/commit/f64f8d1bb5ee7e6056acecf92922c2579d60a569))
+* Add support for expiration_policy ([#23](https://www.github.com/terraform-google-modules/terraform-google-pubsub/issues/23)) ([feca6f5](https://www.github.com/terraform-google-modules/terraform-google-pubsub/commit/feca6f52d87721b22d4d97e83eb97c0270228159))
+
+## [1.3.0](https://www.github.com/terraform-google-modules/terraform-google-pubsub/compare/v1.2.1...v1.3.0) (2020-05-19)
+
+
+### Features
+
+* Add custom KMS key support ([#25](https://www.github.com/terraform-google-modules/terraform-google-pubsub/issues/25)) ([9516ff1](https://www.github.com/terraform-google-modules/terraform-google-pubsub/commit/9516ff1cd7109adac92225caf819178e61281ff1))
+* Add support for message_retention_duration ([#19](https://www.github.com/terraform-google-modules/terraform-google-pubsub/issues/19)) ([71a81ac](https://www.github.com/terraform-google-modules/terraform-google-pubsub/commit/71a81ac4607d89ef7bedf839810cce978fb50eb6))
 
 ## [1.2.1] - 2019-12-18
 
