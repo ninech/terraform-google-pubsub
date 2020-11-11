@@ -14,32 +14,28 @@
  * limitations under the License.
  */
 
-provider "google" {
-  version = "~> 3.37"
-  region  = "us-central1"
+variable "project_id" {
+  type        = string
+  description = "The project ID to manage the Pub/Sub resources"
 }
 
-module "pubsub" {
-  source       = "../../"
-  project_id   = var.project_id
-  topic        = var.topic_name
-  topic_labels = var.topic_labels
+variable "topic_name" {
+  type        = string
+  description = "The name for the Pub/Sub topic"
+}
 
-  pull_subscriptions = [
-    {
-      name                 = "pull"
-      ack_deadline_seconds = 10
-    },
-  ]
+variable "topic_labels" {
+  type        = map(string)
+  description = "A map of labels to assign to the Pub/Sub topic"
+  default     = {}
+}
 
-  push_subscriptions = [
-    {
-      name                 = "push"
-      push_endpoint        = "https://${var.project_id}.appspot.com/"
-      x-goog-version       = "v1beta1"
-      ack_deadline_seconds = 20
-      expiration_policy    = "1209600s" // two weeks
-    },
-  ]
+variable "kms_key_name" {
+  type        = string
+  description = "Name of KMS key to use for pubsub topic"
+}
 
+variable "kms_keyring_name" {
+  type        = string
+  description = "Name of KMS key ring to use for pubsub topic"
 }
